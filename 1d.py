@@ -34,7 +34,7 @@ print("Intercept:", model.intercept_)
 print("Coefficients:", model.coef_)
 print()
 
-# Polynomial Regression
+# Polynomial Regression - added due to ease of implementation
 poly = PolynomialFeatures(degree=2, include_bias=False)
 x_poly = poly.fit_transform(x_train)
 model_poly = LinearRegression()
@@ -46,9 +46,9 @@ print("Intercept:", model_poly.intercept_)
 print("Coefficients:", model_poly.coef_)
 print()
 
-# Advanced Linear Regression
+# Advanced Linear Regression added due to ease of implementation
 x_sm = sm.add_constant(x_train)
 model_sm = sm.OLS(y_train, x_sm)
 results = model_sm.fit()
 print("Advanced Linear Regression:")
-print(results.summary()) 
+print(results.summary())#inspired from r code
